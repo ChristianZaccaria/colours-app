@@ -37,9 +37,11 @@ class Colours {
         return colours.filter { it.startsWith(letter) }
     }
 
-    fun coloursWithSpecificNumberOfChars(size: Int) : List<String>{
+    fun coloursWithSpecificNumberOfChars(size: Int) : List<String> {
         //TODO return the colours that have exactly the same number of chars as the number passed as a parameter
-        return listOf("this should return colours that have ${size} chars")
+        return colours.filter { it.length == size }
+        // Got help from this webpage:
+        // https://kotlinlang.org/docs/collection-filtering.html
     }
 
     fun coloursWithLessCharsThan(size: Int) : List<String>{
