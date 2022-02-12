@@ -52,7 +52,8 @@ class Colours {
     fun isColourInTheList(colour : String) : Boolean{
         //TODO return true of the colour passed as a parameter is in the list and false otherwise
         // Note: the search should be case insensitive - if blue is passed as a parameter it should find Blue, BLUE etc.
-        return false
+        return colour.uppercase() in colours.map { it.uppercase() }
+        // This will return a Boolean. If the colour passed is in the list of colours, it will return true or false.
     }
 
     //TODO Write THREE additional functions of your choice that will perform some sort of
