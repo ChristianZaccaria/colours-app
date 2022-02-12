@@ -62,5 +62,5 @@ fun main(args: Array<String>){
     }
 
     //TODO for the three additional functions you wrote in Colours.kt, print the returned value here.
-
+    println("The List sorted in reversed alphabetic order: ${colours.coloursInReversedAlphabeticOrder()}")
 }
