@@ -27,27 +27,38 @@ fun main(args: Array<String>){
     //TODO Use String templates i.e. ${} to insert the method calls into the actual println string.
     //TODO tidy up the printing layout so that it is neat and has a nicer UI - you can choose what you would like to do
     //     here, maybe add breaks, lines, tabs, dividers, etc, whatever you think for making it nicer / easier to read.
-    println("The list is: ${colours.getAll()}")
+    println(""" -----------------------------------------------------
+        |   The list is: ${colours.getAll()}""".trimMargin())
 
-    println("The List has ${colours.numberOfColours()} elements stored")
+    println(""" -----------------------------------------------------
+        |   The List has ${colours.numberOfColours()} elements stored""".trimMargin())
 
-    println("${colours.firstColour()} is the first colour in the list")
+    println(""" -----------------------------------------------------
+        |   ${colours.firstColour()} is the first colour in the list""".trimMargin())
 
-    println("${colours.lastColour()} is the last colour in the list")
+    println(""" ----------------------------------------------------- 
+        |   ${colours.lastColour()} is the last colour in the list""".trimMargin())
 
-    println("Sorted list is: ${colours.coloursInAplhabeticOrder()}")
+    println(""" -----------------------------------------------------
+        |   Sorted list is: ${colours.coloursInAplhabeticOrder()}""".trimMargin())
 
-    println("CAPITALISED list is: ${colours.coloursInAllCapitals()}")
+    println(""" -----------------------------------------------------
+        |   CAPITALISED list is: ${colours.coloursInAllCapitals()}""".trimMargin())
 
-    println("Colours starting with specific letter ${colours.coloursStartingWithLetter('B')} [ B was chosen ]")
+    println(""" -----------------------------------------------------
+        |   Colours starting with specific letter ${colours.coloursStartingWithLetter('B')} [ B was chosen ]""".trimMargin())
 
-    println("Colours with a specific number of chars ${colours.coloursWithSpecificNumberOfChars(6)} [ 6 was chosen]")
+    println(""" -----------------------------------------------------
+        |   Colours with a specific number of chars ${colours.coloursWithSpecificNumberOfChars(6)} [ 6 was chosen]""".trimMargin())
 
-    println("${colours.coloursWithLessCharsThan(6)} have less than less 6 chars ")
+    println(""" -----------------------------------------------------
+        |   ${colours.coloursWithLessCharsThan(6)} have less than 6 chars """.trimMargin())
 
-    println("True or false, is blue in the list: ${colours.isColourInTheList("blue")}")
+    println(""" -----------------------------------------------------
+        |   True or false, is blue in the list: ${colours.isColourInTheList("blue")}""".trimMargin())
 
-    println("The list of colours, each printed on a new line is:")
+    println(""" -----------------------------------------------------
+        |   The list of colours, each printed on a new line is:""".trimMargin())
     //TODO Write Code here (below this comment) to print the list in this format:
     //    Colour: Red
     //    Colour: Orange
@@ -55,16 +66,19 @@ fun main(args: Array<String>){
     //    Colour: Silver
     var i = 0;
     for (item in colours.getAll()) {
-        println("Colour: " + colours.getAll()[0 + i])
+        println("\tColour: " + colours.getAll()[0 + i])
         i++;
     //When using colours.getAll()[0] I am getting only the first colour from the list. But,
     // Thanks to the var i which increments each time it loops, we can print each colour.
     }
 
     //TODO for the three additional functions you wrote in Colours.kt, print the returned value here.
-    println("The List sorted in reversed alphabetic order: ${colours.coloursInReversedAlphabeticOrder()}")
+    println(""" -----------------------------------------------------
+        |   The List sorted in reversed alphabetic order: ${colours.coloursInReversedAlphabeticOrder()}""".trimMargin())
 
-    println("Colours ending with specific letter ${colours.coloursEndingWithLetter('E')} [ E was chosen ]")
+    println(""" -----------------------------------------------------
+        |   Colours ending with specific letter ${colours.coloursEndingWithLetter('E')} [ E was chosen ]""".trimMargin())
 
-    println("The colour that is in the middle of the list of colours: ${colours.colourInTheMiddleOfList()}")
+    println(""" -----------------------------------------------------
+        |   The colour that is in the middle of the list of colours: ${colours.colourInTheMiddleOfList()}""".trimMargin())
 }
