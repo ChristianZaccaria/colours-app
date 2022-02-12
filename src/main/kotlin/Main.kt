@@ -65,4 +65,6 @@ fun main(args: Array<String>){
     println("The List sorted in reversed alphabetic order: ${colours.coloursInReversedAlphabeticOrder()}")
 
     println("Colours ending with specific letter ${colours.coloursEndingWithLetter('E')} [ E was chosen ]")
+
+    println("The colour that is in the middle of the list of colours: ${colours.colourInTheMiddleOfList()}")
 }

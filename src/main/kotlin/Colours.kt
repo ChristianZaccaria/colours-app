@@ -1,3 +1,5 @@
+import kotlin.reflect.typeOf
+
 class Colours {
 
     private val colours = listOf("Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "Black", "Silver")
@@ -64,5 +66,19 @@ class Colours {
 
     fun coloursEndingWithLetter(letter: Char) : List<String>{
         return colours.filter { it.uppercase().endsWith(letter.uppercase()) }
+    }
+
+    //This function returns the colour that is in the middle of the list of colours.
+    //I used the modulus operator to make sure if there was an item in the middle of the list,
+    //else if the list had an EVEN number of items, it will not return any item.
+    fun colourInTheMiddleOfList() : String {
+        val sizeOfList = colours.size/2
+        val colour = colours.get(sizeOfList);
+
+        if (sizeOfList%2 == 0 )
+            return colour
+
+        else
+            return ("Sorry, the list has an EVEN number of items.")
     }
 }
