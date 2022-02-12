@@ -1,3 +1,7 @@
+
+import java.util.stream.Collectors
+
+
 //TODO INSTRUCTIONS:
 //  1. Now that you have the code in IntelliJ on your computer, use VCS to "Share this project to your GitHub repo
 //     that is attached to your student email.  MAKE SURE YOU HAVE THIS REPO SET TO PRIVATE.
@@ -49,6 +53,13 @@ fun main(args: Array<String>){
     //    Colour: Orange
     //    ...
     //    Colour: Silver
+    var i = 0;
+    for (item in colours.getAll()) {
+        println("Colour: " + colours.getAll()[0 + i])
+        i++;
+    //When using colours.getAll()[0] I am getting only the first colour from the list. But,
+    // Thanks to the var i which increments each time it loops, we can print each colour.
+    }
 
     //TODO for the three additional functions you wrote in Colours.kt, print the returned value here.
 
