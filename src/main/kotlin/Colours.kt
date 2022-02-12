@@ -61,4 +61,8 @@ class Colours {
     fun coloursInReversedAlphabeticOrder(): List<String>{
         return colours.sortedDescending()
     }
+
+    fun coloursEndingWithLetter(letter: Char) : List<String>{
+        return colours.filter { it.uppercase().endsWith(letter.uppercase()) }
+    }
 }
